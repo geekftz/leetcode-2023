@@ -22,7 +22,7 @@ var isIsomorphic = function (s, t) {
   while (i < s.length) {
     if (objS[s[i]]) {
       if (objS[s[i]] !== t[i]) {
-        return -1;
+        return false;
       }
     } else {
       objS[s[i]] = t[i];
@@ -30,7 +30,7 @@ var isIsomorphic = function (s, t) {
 
     if (objT[t[i]]) {
       if (objT[t[i]] !== s[i]) {
-        return -1;
+        return false;
       }
     } else {
       objT[t[i]] = s[i];
